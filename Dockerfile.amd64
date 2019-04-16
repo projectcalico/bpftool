@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 FROM debian:buster-slim as bpftool-build
+ARG KERNEL_REPO=git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+ARG KERNEL_REF=master
 RUN apt-get update && \
 apt-get upgrade -y && \
 apt-get install -y --no-install-recommends \
@@ -24,7 +26,7 @@ apt-get clean
 WORKDIR /tmp
 
 RUN \
-git clone --depth 1 -b master git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git && \
+git clone --depth 1 -b $KERNEL_REF $KERNEL_REPO && \
 cd linux/tools/bpf/bpftool/ && \
 sed -i '/CFLAGS += -O2/a CFLAGS += -static' Makefile && \
 sed -i 's/LIBS = -lelf $(LIBBPF)/LIBS = -lelf -lz $(LIBBPF)/g' Makefile && \
