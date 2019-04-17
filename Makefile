@@ -36,12 +36,12 @@ endif
 
 ###############################################################################
 DOCKERFILE ?= Dockerfile.$(ARCH)
-VERSION ?= latest
+VERSION ?= v5.0
 DEFAULTORG ?= calico
 DEFAULTIMAGE ?= $(DEFAULTORG)/bpftool:$(VERSION)
 ARCHIMAGE ?= $(DEFAULTIMAGE)-$(ARCH)
 BPFTOOLIMAGE ?= $(DEFAULTIMAGE)-$(BUILDARCH)
-KERNELREF ?= master
+KERNELREF ?= $(VERSION)
 KERNELREPO ?= git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
 
 MANIFEST_TOOL_VERSION := v0.7.0
