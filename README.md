@@ -6,11 +6,11 @@ Base image including a statically compiled bpftool for other calico projects to 
 To build the image:
 
 ```
-make build
+make image
 ```
 
 The above will build for whatever architecture you are running on. To force a different architecture:
 
 ```
-ARCH=<somearch> make build
+ARCH=<somearch> make image
 ```
