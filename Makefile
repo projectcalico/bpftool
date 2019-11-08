@@ -36,7 +36,7 @@ endif
 
 ###############################################################################
 DOCKERFILE ?= Dockerfile.$(ARCH)
-VERSION ?= v5.0
+VERSION ?= v5.3
 DEFAULTORG ?= calico
 DEFAULTIMAGE ?= $(DEFAULTORG)/bpftool:$(VERSION)
 ARCHIMAGE ?= $(DEFAULTIMAGE)-$(ARCH)
