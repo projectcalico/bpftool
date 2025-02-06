@@ -35,7 +35,7 @@ ifeq ($(ARCH),x86_64)
 endif
 
 ###############################################################################
-VERSION ?= v7.4.0
+VERSION ?= v7.5.0
 DEFAULTORG ?= calico
 DEFAULTIMAGE ?= $(DEFAULTORG)/bpftool:$(VERSION)
 ARCHIMAGE ?= $(DEFAULTIMAGE)-$(ARCH)
