@@ -19,7 +19,7 @@ make image-single-platform
 
 To build for specific platforms, use the `DOCKER_PLATFORMS` variable:
 ```
-make image DOCKER_PLATFORMS=linux/amd64,linux/arm64/v8,linux/ppc64le,linux/s390x
+make image DOCKER_PLATFORMS=linux/amd64,linux/arm64/v8,linux/ppc64le,linux/riscv64,linux/s390x
 ```
 
 To build/push the image:
