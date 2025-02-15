@@ -14,7 +14,7 @@
 
 FROM --platform=amd64 calico/qemu-user-static:latest as qemu
 
-FROM debian:bookworm-slim as bpftool-build
+FROM ubuntu:22.04 as bpftool-build
 
 ARG SOURCE_REPO=https://github.com/libbpf/bpftool.git
 ARG SOURCE_REF=main
