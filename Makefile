@@ -7,7 +7,7 @@ all: image
 ###############################################################################
 # Input parameters.
 ###############################################################################
-DOCKER_PLATFORMS ?= linux/amd64,linux/arm64/v8,linux/ppc64le,linux/s390x
+DOCKER_PLATFORMS ?= linux/amd64,linux/arm64/v8,linux/ppc64le,linux/riscv64,linux/s390x
 VERSION ?= v7.5.0
 IMAGE_ORG ?= calico
 IMAGE ?= $(IMAGE_ORG)/bpftool:$(VERSION)
